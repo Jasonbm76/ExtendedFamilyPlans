@@ -1,6 +1,6 @@
 using System;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions
+namespace MyFamilyPlanner.Areas.HelpPage.ModelDescriptions
 {
 	/// <summary>
 	/// Describes a type model.

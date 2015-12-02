@@ -11,7 +11,7 @@ using System.Web.Http.Description;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions
+namespace MyFamilyPlanner.Areas.HelpPage.ModelDescriptions
 {
 	/// <summary>
 	/// Generates model descriptions for given types.

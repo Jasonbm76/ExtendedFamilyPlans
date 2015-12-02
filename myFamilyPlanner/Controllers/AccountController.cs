@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using ExtendedFamilyPlans.Models;
-using ExtendedFamilyPlans.Providers;
-using ExtendedFamilyPlans.Results;
+using MyFamilyPlanner.Models;
+using MyFamilyPlanner.Providers;
+using MyFamilyPlanner.Results;
 
-namespace ExtendedFamilyPlans.Controllers
+namespace MyFamilyPlanner.Controllers
 {
 	[Authorize]
 	[RoutePrefix("api/Account")]

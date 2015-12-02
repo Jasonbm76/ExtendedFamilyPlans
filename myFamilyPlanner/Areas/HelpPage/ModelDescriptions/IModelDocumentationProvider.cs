@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions
+namespace MyFamilyPlanner.Areas.HelpPage.ModelDescriptions
 {
 	public interface IModelDocumentationProvider
 	{

@@ -1,6 +1,6 @@
 using System;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions
+namespace MyFamilyPlanner.Areas.HelpPage.ModelDescriptions
 {
 	/// <summary>
 	/// Use this attribute to change the name of the <see cref="ModelDescription"/> generated for a type.

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ExtendedFamilyPlans.Models
+namespace MyFamilyPlanner.Models
 {
 	// Models returned by AccountController actions.
 

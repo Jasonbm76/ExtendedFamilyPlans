@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions
+namespace MyFamilyPlanner.Areas.HelpPage.ModelDescriptions
 {
 	internal static class ModelNameHelper
 	{

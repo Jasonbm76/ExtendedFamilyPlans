@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions
+namespace MyFamilyPlanner.Areas.HelpPage.ModelDescriptions
 {
 	public class ComplexTypeModelDescription : ModelDescription
 	{

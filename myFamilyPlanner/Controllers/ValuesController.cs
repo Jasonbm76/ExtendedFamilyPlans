@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace ExtendedFamilyPlans.Controllers
+namespace MyFamilyPlanner.Controllers
 {
 	[Authorize]
 	public class ValuesController : ApiController

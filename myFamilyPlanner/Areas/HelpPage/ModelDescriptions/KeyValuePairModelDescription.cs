@@ -1,4 +1,4 @@
-namespace ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions
+namespace MyFamilyPlanner.Areas.HelpPage.ModelDescriptions
 {
 	public class KeyValuePairModelDescription : ModelDescription
 	{

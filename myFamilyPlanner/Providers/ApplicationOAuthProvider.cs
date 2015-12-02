@@ -9,9 +9,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using ExtendedFamilyPlans.Models;
+using MyFamilyPlanner.Models;
 
-namespace ExtendedFamilyPlans.Providers
+namespace MyFamilyPlanner.Providers
 {
 	public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
 	{

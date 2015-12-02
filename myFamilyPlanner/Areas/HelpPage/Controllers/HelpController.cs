@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions;
-using ExtendedFamilyPlans.Areas.HelpPage.Models;
+using MyFamilyPlanner.Areas.HelpPage.ModelDescriptions;
+using MyFamilyPlanner.Areas.HelpPage.Models;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage.Controllers
+namespace MyFamilyPlanner.Areas.HelpPage.Controllers
 {
 	/// <summary>
 	/// The controller that will handle requests for the help page.

@@ -1,4 +1,4 @@
-namespace ExtendedFamilyPlans.Migrations
+namespace MyFamilyPlanner.Migrations
 {
 	using Models;
 	using System;
@@ -6,15 +6,15 @@ namespace ExtendedFamilyPlans.Migrations
 	using System.Data.Entity.Migrations;
 	using System.Linq;
 
-	internal sealed class Configuration : DbMigrationsConfiguration<ExtendedFamilyPlans.Models.ApplicationDbContext>
+	internal sealed class Configuration : DbMigrationsConfiguration<MyFamilyPlanner.Models.ApplicationDbContext>
 	{
 		public Configuration()
 		{
 			AutomaticMigrationsEnabled = false;
-			ContextKey = "ExtendedFamilyPlans.Models.ApplicationDbContext";
+			ContextKey = "MyFamilyPlanner.Models.ApplicationDbContext";
 		}
 
-		protected override void Seed(ExtendedFamilyPlans.Models.ApplicationDbContext context)
+		protected override void Seed(MyFamilyPlanner.Models.ApplicationDbContext context)
 		{
 			var people = new Person[] {
 				new Person {FirstName = "John", LastName="Doe" }

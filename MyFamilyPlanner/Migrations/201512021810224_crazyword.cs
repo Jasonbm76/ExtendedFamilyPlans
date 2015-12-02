@@ -1,4 +1,4 @@
-namespace ExtendedFamilyPlans.Migrations
+namespace MyFamilyPlanner.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
