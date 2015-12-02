@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(ExtendedFamilyPlans.Startup))]
+[assembly: OwinStartup(typeof(MyFamilyPlanner.Startup))]
 
-namespace ExtendedFamilyPlans
+namespace MyFamilyPlanner
 {
 	public partial class Startup
 	{

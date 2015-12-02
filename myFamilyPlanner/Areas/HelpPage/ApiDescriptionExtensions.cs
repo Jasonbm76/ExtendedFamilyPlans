@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage
+namespace MyFamilyPlanner.Areas.HelpPage
 {
 	public static class ApiDescriptionExtensions
 	{

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace ExtendedFamilyPlans
+namespace MyFamilyPlanner
 {
 	public class FilterConfig
 	{

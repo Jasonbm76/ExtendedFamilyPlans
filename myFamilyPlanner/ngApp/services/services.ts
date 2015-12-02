@@ -1,17 +1,16 @@
 ﻿namespace MyApp.Services {
 
-    export class MovieService {
-        private MovieResource;
+	export class MyFamilyPlannerService {
 
-        public listMovies() {
-            return this.MovieResource.query();
-        }
+		public login() {
 
-        constructor($resource: angular.resource.IResourceService) {
-            this.MovieResource = $resource('/api/movies/:id');
-        }
-    }
+		}
 
-    angular.module('MyApp').service('movieService', MovieService);
+		constructor(
+			$resource: angular.resource.IResourceService) {
+		}
+	}
+
+	angular.module('MyApp').service('myFamilyPlannerService', MyFamilyPlannerService);
 
 }

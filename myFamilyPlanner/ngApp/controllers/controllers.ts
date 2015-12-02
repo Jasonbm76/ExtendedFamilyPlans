@@ -1,19 +1,22 @@
 ﻿namespace MyApp.Controllers {
 
-    export class HomeController {
-        public movies;
+	export class HomeController {
 
-        constructor
-        (
-            private movieService: MyApp.Services.MovieService,
-            private $location: angular.ILocationService
-        ) {
-            this.movies = this.movieService.listMovies();
-        }
-    }
+		constructor(
+			private myFamilyPlannerService: MyApp.Services.MyFamilyPlannerService,
+			private $uibModal: angular.ui.bootstrap.IModalService,
+			private $location: angular.ILocationService)
+		{
+			//this.movies = this.movieService.listMovies();
+		}
 
+		public login() {
 
-    export class AboutController {
+		}
 
-    }
+	}
+
+	export class AboutController {
+
+	}
 }

@@ -3,11 +3,14 @@ var MyApp;
     var Controllers;
     (function (Controllers) {
         var HomeController = (function () {
-            function HomeController(movieService, $location) {
-                this.movieService = movieService;
+            function HomeController(myFamilyPlannerService, $uibModal, $location) {
+                this.myFamilyPlannerService = myFamilyPlannerService;
+                this.$uibModal = $uibModal;
                 this.$location = $location;
-                this.movies = this.movieService.listMovies();
+                //this.movies = this.movieService.listMovies();
             }
+            HomeController.prototype.login = function () {
+            };
             return HomeController;
         })();
         Controllers.HomeController = HomeController;

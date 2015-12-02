@@ -2,17 +2,15 @@ var MyApp;
 (function (MyApp) {
     var Services;
     (function (Services) {
-        var MovieService = (function () {
-            function MovieService($resource) {
-                this.MovieResource = $resource('/api/movies/:id');
+        var MyFamilyPlannerService = (function () {
+            function MyFamilyPlannerService($resource) {
             }
-            MovieService.prototype.listMovies = function () {
-                return this.MovieResource.query();
+            MyFamilyPlannerService.prototype.login = function () {
             };
-            return MovieService;
+            return MyFamilyPlannerService;
         })();
-        Services.MovieService = MovieService;
-        angular.module('MyApp').service('movieService', MovieService);
+        Services.MyFamilyPlannerService = MyFamilyPlannerService;
+        angular.module('MyApp').service('myFamilyPlannerService', MyFamilyPlannerService);
     })(Services = MyApp.Services || (MyApp.Services = {}));
 })(MyApp || (MyApp = {}));
 //# sourceMappingURL=services.js.map

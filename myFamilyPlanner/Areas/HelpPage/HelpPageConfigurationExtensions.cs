@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using ExtendedFamilyPlans.Areas.HelpPage.ModelDescriptions;
-using ExtendedFamilyPlans.Areas.HelpPage.Models;
+using MyFamilyPlanner.Areas.HelpPage.ModelDescriptions;
+using MyFamilyPlanner.Areas.HelpPage.Models;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage
+namespace MyFamilyPlanner.Areas.HelpPage
 {
 	public static class HelpPageConfigurationExtensions
 	{

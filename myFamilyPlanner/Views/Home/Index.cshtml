@@ -1,29 +1,28 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
 <head>
-    <title>myFamily Planner</title>
-    <base href="/" />
+	<title>myFamily Planner</title>
+	<base href="/" />
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
 </head>
-<body ng-controller="AccountController as account">
+<body ng-controller="HomeController as vm">
 
-    <h1>myFamily Planner</h1>
-    <div>
-        <a href="/">Home</a> /
-        <a href="/about">About</a> /
-        <a href="/login" ng-show="!account.isLoggedIn()">login</a>
-        <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a>
-    </div>
+	<div class="container">
+		<div class="row row-left">
+			<div class="col-md-12">
+				<h1>myFamilyPlanner App</h1>
+			</div>
+		</div>
+	</div>
 
-    <ng-view></ng-view>
+	<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+	<script src="~/Scripts/angular.min.js"></script>
+	<script src="~/Scripts/angular-route.min.js"></script>
+	<script src="~/Scripts/angular-resource.min.js"></script>
+	<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+	<script src="~/ngApp/app.js"></script>
+	<script src="~/ngApp/services/services.js"></script>
+	<script src="~/ngApp/controllers/controllers.js"></script>
 
-    <script src="~/Scripts/angular.min.js"></script>
-    <script src="~/Scripts/angular-route.min.js"></script>
-    <script src="~/Scripts/angular-resource.min.js"></script>
-
-    <script src="~/ngApp/app.js"></script>
-    <script src="~/ngApp/controllers/controllers.js"></script>
-    <script src="~/ngApp/services/services.js"></script>
-
-    <script src="~/ngApp/controllers/accountController.js"></script>
-    <script src="~/ngApp/services/accountService.js"></script>
 </body>
 </html>

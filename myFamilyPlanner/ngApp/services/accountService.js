@@ -54,6 +54,8 @@ var MyApp;
                     });
                 });
             };
+            AccountService.prototype.loginModal = function () {
+            };
             AccountService.prototype.logout = function () {
                 // clear all of session storage (including claims)
                 this.$window.sessionStorage.clear();

@@ -3,12 +3,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using ExtendedFamilyPlans.Models;
+using MyFamilyPlanner.Models;
 using System.Net.Mail;
 using System.Net;
 using System.Configuration;
 
-namespace ExtendedFamilyPlans
+namespace MyFamilyPlanner
 {
 
 	//public class EmailService : IIdentityMessageService

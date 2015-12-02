@@ -3,9 +3,10 @@ var MyApp;
     var Controllers;
     (function (Controllers) {
         var AccountController = (function () {
-            function AccountController(accountService, $location) {
+            function AccountController(accountService, $uibModal, $location) {
                 var _this = this;
                 this.accountService = accountService;
+                this.$uibModal = $uibModal;
                 this.$location = $location;
                 this.getExternalLogins().then(function (results) {
                     _this.externalLogins = results;
@@ -20,6 +21,8 @@ var MyApp;
             AccountController.prototype.logout = function () {
                 this.accountService.logout();
             };
+            AccountController.prototype.login = function () {
+            };
             AccountController.prototype.getExternalLogins = function () {
                 return this.accountService.getExternalLogins();
             };
@@ -28,8 +31,9 @@ var MyApp;
         Controllers.AccountController = AccountController;
         angular.module('MyApp').controller('AccountController', AccountController);
         var LoginController = (function () {
-            function LoginController(accountService, $location) {
+            function LoginController(accountService, $uibModal, $location) {
                 this.accountService = accountService;
+                this.$uibModal = $uibModal;
                 this.$location = $location;
             }
             LoginController.prototype.login = function () {

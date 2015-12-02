@@ -1,4 +1,4 @@
-﻿using ExtendedFamilyPlans.Models;
+﻿using MyFamilyPlanner.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace ExtendedFamilyPlans.API
+namespace MyFamilyPlanner.API
 {
 	public class MoviesController : ApiController
 	{

@@ -8,12 +8,12 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using ExtendedFamilyPlans.Providers;
-using ExtendedFamilyPlans.Models;
+using MyFamilyPlanner.Providers;
+using MyFamilyPlanner.Models;
 using System.Configuration;
 using Microsoft.Owin.Security.Twitter;
 
-namespace ExtendedFamilyPlans
+namespace MyFamilyPlanner
 {
 	public partial class Startup
 	{

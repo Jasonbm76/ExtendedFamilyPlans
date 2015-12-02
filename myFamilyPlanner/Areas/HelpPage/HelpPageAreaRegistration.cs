@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace ExtendedFamilyPlans.Areas.HelpPage
+namespace MyFamilyPlanner.Areas.HelpPage
 {
 	public class HelpPageAreaRegistration : AreaRegistration
 	{
