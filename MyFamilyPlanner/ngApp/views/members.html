@@ -1,0 +1,41 @@
+﻿<h2>Family Members</h2>
+
+<!-- Add a Family Member -->
+<span class="right">
+	<a href="/addMember"><i class="fa fa-user-plus"></i> Add New</a>
+</span>
+
+<hr />
+
+<!-- Family Members -->
+<div class="familyMemberList">
+	
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Modify</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="member in controller.members">
+				<td>{{member.id}}</td>
+				<td>{{member.firstName}}</td>
+				<td>{{member.lastName}}</td>
+				<td><a href="mailto:{{member.email}}" title="Send an email to {{member.firstName}}">{{member.email}}</a></td> 
+				<td>{{member.phone}}</td>
+				<td>
+					<a href="/editMember/{{member.id}}">edit</a> |
+					<a href="/deleteMember/{{member.id}}">delete</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+</div>
+
+

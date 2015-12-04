@@ -3,6 +3,7 @@
 	export class AccountController {
 		public externalLogins;
 
+
 		public getClaim(type) {
 			return this.accountService.getClaim(type);
 		}
@@ -15,18 +16,11 @@
 			this.accountService.logout();
 		}
 
-		public login() {
-			
-		}
-
 		public getExternalLogins() {
 			return this.accountService.getExternalLogins();
 		}
 
-		constructor(
-			private accountService: MyApp.Services.AccountService,
-			private $uibModal: angular.ui.bootstrap.IModalService,
-			private $location: ng.ILocationService) {
+		constructor(private accountService: MyApp.Services.AccountService, private $location: ng.ILocationService) {
 			this.getExternalLogins().then((results) => {
 				this.externalLogins = results;
 			});
@@ -48,10 +42,7 @@
 			});
 		}
 
-		constructor(
-			private accountService: MyApp.Services.AccountService,
-			private $uibModal: angular.ui.bootstrap.IModalService,
-			private $location: ng.ILocationService) { }
+		constructor(private accountService: MyApp.Services.AccountService, private $location: ng.ILocationService) { }
 	}
 
 

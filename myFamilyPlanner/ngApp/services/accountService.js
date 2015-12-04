@@ -54,8 +54,6 @@ var MyApp;
                     });
                 });
             };
-            AccountService.prototype.loginModal = function () {
-            };
             AccountService.prototype.logout = function () {
                 // clear all of session storage (including claims)
                 this.$window.sessionStorage.clear();
@@ -139,4 +137,3 @@ var MyApp;
         angular.module('MyApp').service('accountService', AccountService);
     })(Services = MyApp.Services || (MyApp.Services = {}));
 })(MyApp || (MyApp = {}));
-//# sourceMappingURL=accountService.js.map

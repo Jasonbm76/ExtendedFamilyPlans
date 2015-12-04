@@ -52,9 +52,6 @@
 			});
 		}
 
-		loginModal() {
-
-		}
 
 		logout() {
 			// clear all of session storage (including claims)

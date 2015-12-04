@@ -22,7 +22,7 @@ namespace MyFamilyPlanner.Models
 	public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 	{
 
-		public IDbSet<Person> People { get; set; }
+		public IDbSet<Member> Members { get; set; }
 
 		public ApplicationDbContext()
 				: base("DefaultConnection", throwIfV1Schema: false)

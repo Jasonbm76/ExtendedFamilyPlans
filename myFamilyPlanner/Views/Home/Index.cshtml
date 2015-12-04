@@ -2,27 +2,98 @@
 <head>
 	<title>myFamily Planner</title>
 	<base href="/" />
-	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-	<link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
-</head>
-<body ng-controller="HomeController as vm">
 
-	<div class="container">
-		<div class="row row-left">
-			<div class="col-md-12">
-				<h1>myFamilyPlanner App</h1>
+	<!-- Font Awesome & Google Web Fonts -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto+Condensed:300,300italic,400,400italic,700,700italic|Titillium+Web:400,400italic,600,600italic,700,700italic|Lato:400,400italic,700,700italic,900' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap CSS -->
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
+
+	<!-- Site CSS -->
+	<link href="~/Content/Site.css" rel="stylesheet" />
+
+</head>
+<body ng-controller="AccountController as controller">
+
+	<div class="container-fluid">
+
+		<!-- Header -->
+		<header>
+			<div class="row">
+
+				<!-- Logo -->
+				<div class="col-md-4">
+					<a href="/home" title="Return to Home">
+						<img src="~/Content/Images/Logo.png" width="300" height="70" border="0" alt="myFamilyPlanner App" class="img-responsive" />
+					</a>
+				</div>
+
+				<!-- User Nav -->
+				<div id="userNav" class="col-md-8 pull-right">
+
+					<ul class="navbar-right">
+						<li><a href="/login" ng-show="!account.isLoggedIn()">login</a></li>
+						<li><a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a></li>
+						<li><a href="#" title="Settings"><i class="fa fa-cog"></i> Settings</a></li>
+					</ul>
+
+				</div>
 			</div>
+		</header>
+
+		<!-- Content Container -->
+		<div id="contentContainer" class="row">
+
+			<!-- Sidebar -->
+			<div id="sidebar" class="col-md-3">
+
+				<ul class="nav nav-pills nav-stacked sidebar_nav" bs-navbar>
+					<li data-match-route="/"><a href="/" title="Return to Home"><i class="fa fa-home"></i> Home</a></li>
+					<li data-match-route="/members">
+						<a href="/members" title="List Family Members"><i class="fa fa-user"></i> Family Members</a>
+
+						<ul class="nav nav-pills nav-stacked sidebar_subnav">
+							<li data-match-route="/members"><a href="/members"><i class="fa fa-list"></i> List</a></li>
+							<li data-match-route="/addMember"><a href="/addMember"><i class="fa fa-user-plus"></i>Add</a></li>
+						</ul>
+
+					</li>
+					<li data-match-route="/messages"><a href="#" title="Messages"><i class="fa fa-envelope"></i> Messages</a></li>
+				</ul>
+
+			</div>
+
+			<!-- Content -->
+			<div id="contentArea" class="col-md-9">
+				<ng-view></ng-view>
+			</div>
+
 		</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="row center-block">
+				<div class="col-md-12">
+					&copy; Jason Murphy
+				</div>
+			</div>
+		</footer>
 	</div>
 
 	<script src="~/Scripts/jquery-2.1.4.min.js"></script>
 	<script src="~/Scripts/angular.min.js"></script>
 	<script src="~/Scripts/angular-route.min.js"></script>
 	<script src="~/Scripts/angular-resource.min.js"></script>
+	<script src="~/Scripts/angular-strap.min.js"></script>
+	<script src="~/Scripts/angular-strap.tpl.js"></script>
 	<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
 	<script src="~/ngApp/app.js"></script>
 	<script src="~/ngApp/services/services.js"></script>
 	<script src="~/ngApp/controllers/controllers.js"></script>
+	<script src="~/ngApp/controllers/accountController.js"></script>
+	<script src="~/ngApp/services/accountService.js"></script>
 
 </body>
 </html>

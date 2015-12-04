@@ -7,40 +7,43 @@ using MyFamilyPlanner.Models;
 using System.Net.Mail;
 using System.Net;
 using System.Configuration;
+using SendGrid;
 
 namespace MyFamilyPlanner
 {
 
-	//public class EmailService : IIdentityMessageService
-	//{
-	//    public Task SendAsync(IdentityMessage message)
-	//    {
-	//        return configSendGridasync(message);
-	//    }
+	public class EmailService : IIdentityMessageService
+	{
+		public Task SendAsync(IdentityMessage message)
+		{
+			return configSendGridasync(message);
+		}
 
-	//    private Task configSendGridasync(IdentityMessage message)
-	//    {
-	//        var myMessage = new SendGridMessage();
-	//        myMessage.AddTo(message.Destination);
-	//        myMessage.From = new MailAddress("Stephen.Walther@CoderCamps.com", "Account Activation");
-	//        myMessage.Subject = message.Subject;
-	//        myMessage.Text = message.Body;
-	//        myMessage.Html = message.Body;
+		private Task configSendGridasync(IdentityMessage message)
+		{
+			var myMessage = new SendGridMessage();
+			myMessage.AddTo(message.Destination);
+			myMessage.From = new MailAddress("Stephen.Walther@CoderCamps.com", "Account Activation");
+			myMessage.Subject = message.Subject;
+			myMessage.Text = message.Body;
+			myMessage.Html = message.Body;
 
-	//        var credentials = new NetworkCredential(ConfigurationManager.AppSettings["sendGridUserName"], ConfigurationManager.AppSettings["sendGridPassword"]);
+			var credentials = new NetworkCredential(ConfigurationManager.AppSettings["sendGridUserName"], ConfigurationManager.AppSettings["sendGridPassword"]);
 
-	//        // Create a Web transport for sending email.
-	//        var transportWeb = new Web(credentials);
+			// Create a Web transport for sending email.
+			var transportWeb = new Web(credentials);
 
-	//        // Send the email.
-	//        if (transportWeb != null) {
-	//            return transportWeb.DeliverAsync(myMessage);
-	//        }
-	//        else {
-	//            return Task.FromResult(0);
-	//        }
-	//    }
-	//}
+			// Send the email.
+			if (transportWeb != null)
+			{
+				return transportWeb.DeliverAsync(myMessage);
+			}
+			else
+			{
+				return Task.FromResult(0);
+			}
+		}
+	}
 
 
 	// Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
@@ -64,14 +67,20 @@ namespace MyFamilyPlanner
 			// Configure validation logic for passwords
 			manager.PasswordValidator = new PasswordValidator
 			{
-				RequiredLength = 6,
-				RequireNonLetterOrDigit = true,
-				RequireDigit = true,
-				RequireLowercase = true,
-				RequireUppercase = true,
+				//RequiredLength = 6,
+				//RequireNonLetterOrDigit = true,
+				//RequireDigit = true,
+				//RequireLowercase = true,
+				//RequireUppercase = true,
+
+				RequiredLength = 3,
+				RequireNonLetterOrDigit = false,
+				RequireDigit = false,
+				RequireLowercase = false,
+				RequireUppercase = false,
 			};
 
-			//manager.EmailService = new EmailService();
+			manager.EmailService = new EmailService();
 
 			var dataProtectionProvider = options.DataProtectionProvider;
 			if (dataProtectionProvider != null)

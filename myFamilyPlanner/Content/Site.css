@@ -1,17 +1,167 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/* HTML Elements *****************************************************************************************/
+
+BODY {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 10px;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility !important;
+  font-size: 16px;
+  line-height: 18px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+BODY, HTML {
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+BUTTON {
+	/*margin: auto 5px auto 5px;*/
 }
+
+DIV {
+	border: solid 0px red;
+}
+
+FOOTER {
+	position: absolute;
+	bottom: 0;
+	padding: 15px 0 5px 0;
+	height: 50px;
+	width: 100%;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+}
+
+HEADER {
+	background-color: #222;
+	color: #fff;
+	height: 80px;
+}
+
+	HEADER .row {
+		margin: 0;
+	}
+
+H1, H2, H3, H4, H5, H6 {
+  font-family: "Titillium Regular",sans-serif !important;
+  text-rendering: optimizeLegibility !important;
+  color: #333;
+}
+
+H1 { font-size: 36px; }
+H2 { font-size: 32px; }
+H3 { font-size: 28px; }
+H4 { font-size: 20px; }
+H5 { font-size: 18px; }
+H6 { font-size: 16px; }
+
+INPUT {
+	max-width: 300px;
+}
+
+P {
+  line-height: 20px;
+}
+
+
+/* Classes *********************************************************************************************/
+
+.container-fluid {
+	padding: 0;
+}
+
+#contentArea {
+	padding: 0 10px 10px 20px;
+	width: 80%;
+}
+
+#contentContainer {
+	margin: 0;
+	position: absolute;
+	top: 80px;
+	bottom: 50px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.fa {
+	margin-right: 5px;
+	text-align: right;
+}
+
+.familyMemberList {
+	clear: both;
+	margin: 25px 0 5px 0;
+}
+
+.nav-pills > LI > A {
+  border-radius: 0px;
+}
+
+	.nav-pills > LI.active > A {
+		color: #fff !important;
+	}
+
+.right {
+	float: right;
+	clear: both;
+	margin: -15px 0 5px 0;
+}
+
+#sidebar {
+	padding: 0;
+	height: 100%;
+	max-width: 15%;
+	background-color: #00BCD4;
+	color: #fff;
+	border-right: solid 5px #0091A3;
+}
+
+	#sidebar A {
+		background-color: rgba(0, 0, 0, 0.1);
+		color: #006675;
+		margin: 0;
+		padding: 10px 10px 10px 30px;
+	}
+
+		#sidebar A:hover {
+			color: #fff;
+		}
+
+.sidebar_nav {
+	
+}
+
+.sidebar_subnav {
+	margin: 2px 0 2px 20px;
+}
+
+	.sidebar_subnav > LI > A {
+		background-color: rgba(200, 200, 200, 0.5) !important;
+	}
+
+#userNav {
+	padding: 25px 30px 0 0;
+	text-align: right;
+}
+
+	#userNav A {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	#userNav A:hover {
+		color: #00BCD4;
+	}
+
+	#userNav LI {
+		list-style: none;
+	}
